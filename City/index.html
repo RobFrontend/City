@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="section-hero">
+      <div class="nav">
+        <div class="state-box">California</div>
+        <div class="navigation">
+          <a class="nav-link" href="#beach">Beach</a>
+          <a class="nav-link" href="#gallery">Gallery</a>
+          <a class="nav-link" href="#more">More</a>
+        </div>
+      </div>
+      <div class="hero grid grid-2--colls">
+        <div class="hero-logo-box">
+          <h1 class="heading-primary">
+            Los<br />Angeles
+            <svg
+              class="triangle"
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns:svgjs="http://svgjs.dev/svgjs"
+              viewBox="0 0 800 800"
+              opacity="1"
+            >
+              <defs>
+                <linearGradient
+                  x1="50%"
+                  y1="0%"
+                  x2="50%"
+                  y2="100%"
+                  id="nnneon-grad"
+                >
+                  <stop
+                    stop-color="hsl(184, 74%, 44%)"
+                    stop-opacity="1"
+                    offset="0%"
+                  ></stop>
+                  <stop
+                    stop-color="hsl(332, 87%, 70%)"
+                    stop-opacity="1"
+                    offset="100%"
+                  ></stop>
+                </linearGradient>
+                <filter
+                  id="nnneon-filter"
+                  x="-100%"
+                  y="-100%"
+                  width="400%"
+                  height="400%"
+                  filterUnits="objectBoundingBox"
+                  primitiveUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feGaussianBlur
+                    stdDeviation="8 6"
+                    x="0%"
+                    y="0%"
+                    width="100%"
+                    height="100%"
+                    in="SourceGraphic"
+                    edgeMode="none"
+                    result="blur"
+                  ></feGaussianBlur>
+                </filter>
+                <filter
+                  id="nnneon-filter2"
+                  x="-100%"
+                  y="-100%"
+                  width="400%"
+                  height="400%"
+                  filterUnits="objectBoundingBox"
+                  primitiveUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feGaussianBlur
+                    stdDeviation="14 14"
+                    x="0%"
+                    y="0%"
+                    width="100%"
+                    height="100%"
+                    in="SourceGraphic"
+                    edgeMode="none"
+                    result="blur"
+                  ></feGaussianBlur>
+                </filter>
+              </defs>
+              <g stroke-width="16" stroke="url(#nnneon-grad)" fill="none">
+                <polygon
+                  points="400,254.5 254.5,545.5 545.5,545.5"
+                  filter="url(#nnneon-filter)"
+                ></polygon>
+                <polygon
+                  points="408,254.5 262.5,545.5 553.5,545.5"
+                  filter="url(#nnneon-filter2)"
+                  opacity="0.39"
+                ></polygon>
+                <polygon
+                  points="392,254.5 246.5,545.5 537.5,545.5"
+                  filter="url(#nnneon-filter2)"
+                  opacity="0.39"
+                ></polygon>
+                <polygon points="400,254.5 254.5,545.5 545.5,545.5"></polygon>
+              </g>
+            </svg>
+          </h1>
+        </div>
+
+        <div class="hero-quote-box">
+          <p class="p-hero">
+            "This is the place<br />
+            They say<br />
+            People come from far far far away<br />
+            To find their dreams<br />
+            Chasin' down these meteors and comets called dreams..."
+          </p>
+          <div class="hero-adnotation">        
+            <p class="p-adno">
+              Click to go to YouTube to listen to MosDef - California
+              <p class="hero-adnotation-adno"></p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-features">
+      <div class="features-logos">
+        <div class="features-img-box">
+         <a href="https://github.com/RobFrontend" target="_blank">
+           <img class="features-img" src="img/logo-gh.png"> 
+          </a>
+        </div>
+        <div class="features-img-box">
+          <a href="https://www.instagram.com/rob_learns_frontend/" target="_blank">
+            <img class="features-img" src="img/logo-ig.png"> 
+           </a>
+        </div>
+        <div class="features-img-box">
+          <a href="https://www.linkedin.com/in/robert-grabowski-b97965239/" target="_blank">
+            <img class="features-img" src="img/logo-in.png"> 
+           </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-beach" id="beach">
+      <h2>Beach</h2>
+    </section>
+    <section class="section-gallery" id="gallery">
+      <h2>Gallery</h2>
+    </section>
+    <section class="section-more" id="more">
+      <h2>More</h2>
+    </section>
+  </body>
+</html>

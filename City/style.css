@@ -1,0 +1,200 @@
+/* NAV */
+.state-box {
+  font-size: 3.2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  opacity: 0.7;
+}
+.navigation {
+  display: flex;
+  gap: 4.8rem;
+}
+
+.nav-link {
+  padding: 0.6rem 2.4rem;
+  font-size: 2.4rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 10px rgba(245, 112, 174, 0.6));
+  transition: all 0.3s;
+}
+.nav-link:last-child {
+  padding: 0.6rem 2.4rem;
+  background-color: rgba(245, 112, 174, 0.2);
+  background: linear-gradient(
+    135deg,
+    rgba(245, 112, 174, 0.6),
+    rgba(29, 184, 195, 0.6)
+  );
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.nav-link:hover {
+  color: rgba(233, 230, 238, 0.6);
+  filter: drop-shadow(0px 0px 10px rgba(245, 112, 174, 0.9));
+}
+.nav-link:last-child:hover {
+  background: linear-gradient(
+    270deg,
+    rgba(245, 112, 174, 0.8),
+    rgba(29, 184, 195, 0.8)
+  );
+  opacity: 1;
+}
+/* ********** */
+/* HERO */
+
+.hero {
+  padding: 12.8rem 3.2rem;
+  gap: 6.4rem;
+}
+
+.heading-primary {
+  position: relative;
+  font-size: 9.6rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: -3px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+}
+
+.triangle {
+  position: absolute;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  width: 100%;
+  top: 50%;
+  opacity: 1;
+  z-index: -1;
+  transition: all 1s;
+}
+
+.hero-quote-box {
+  justify-self: center;
+  align-self: end;
+  position: relative;
+  width: 40%;
+  left: 10%;
+  height: 500px;
+  background-image: linear-gradient(
+      130deg,
+      rgba(245, 112, 174, 0.05),
+      rgba(29, 184, 195, 0.05)
+    ),
+    url("img/hero-small.webp");
+  background-size: cover;
+  background-position: center;
+  transition: all 0.5s;
+  filter: brightness(1);
+  box-shadow: 0px 0px 30px 0px #f570ae0d;
+  border-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+  border-width: 1rem;
+  border-style: solid;
+  border-image: linear-gradient(
+      10deg,
+      rgba(245, 112, 174, 0.4),
+      rgba(29, 184, 195, 0.4)
+    )
+    1;
+}
+
+.hero-quote-box:hover {
+  transform: translateY(-0.6rem);
+  filter: brightness(1.05);
+  box-shadow: 0px 0px 40px 0px rgba(245, 112, 174, 0.1);
+  border-image: linear-gradient(
+      100deg,
+      rgba(245, 112, 174, 0.6),
+      rgba(29, 184, 195, 0.6)
+    )
+    1;
+}
+
+.p-hero {
+  position: absolute;
+  text-align: center;
+  font-size: 2.4rem;
+  width: 50%;
+  filter: drop-shadow(0px 0px 10px rgba(66, 68, 90, 1));
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.hero-adnotation {
+  position: relative;
+  position: absolute;
+  top: -8rem;
+  padding: 1.2rem 1.8rem;
+  width: 60%;
+  background: linear-gradient(
+    100deg,
+    rgba(245, 112, 174),
+    rgba(245, 112, 174),
+    rgba(29, 184, 195)
+  );
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.p-adno {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.hero-adnotation-adno {
+  position: absolute;
+  bottom: -7px;
+  border: 10px solid rgba(245, 112, 174);
+  transform: rotate(45deg);
+  z-index: -1;
+}
+/* ********** */
+/* Features */
+
+.features-logos {
+  padding: 3.2rem;
+  position: relative;
+  display: flex;
+  gap: 6.4rem;
+  justify-content: center;
+  border-bottom: 1px solid rgba(66, 68, 90, 0.1);
+  box-shadow: 0px 2px 20px 0px rgba(66, 68, 90, 0.1);
+}
+.features-logos:after {
+  content: "robfrontend";
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 1.2rem;
+  color: rgba(245, 112, 174);
+  font-family: inherit;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.features-img {
+  filter: brightness(0);
+  opacity: 0.8;
+  transition: all 0.3s;
+  width: 8rem;
+}
+.features-img:hover {
+  opacity: 1;
+}
