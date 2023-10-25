@@ -55,6 +55,9 @@ function checkIfTablet() {
       adnoHero.style.opacity = "0";
     }, 3000);
     setInterval(() => {
+      setTimeout(() => {
+        quoteHero.style.opacity = "0";
+      }, 10000);
       if (quoteHero.style.opacity === "0") {
         quoteHero.style.opacity = "0.2";
       } else {
@@ -65,3 +68,13 @@ function checkIfTablet() {
 }
 checkIfTablet();
 //window.addEventListener("resize", checkIfTablet);
+
+//////////////////////////////////////////
+// Mobile navigation
+
+const btnMobile = document.querySelector(".btn-mobile-nav");
+const navigation = document.querySelector(".navigation-box");
+
+// btnMobile.addEventListener("click", function () {
+//   navigation.classList.toggle("nav-open");
+// });

@@ -44,12 +44,36 @@
   );
   opacity: 1;
 }
+/* MOBILE NAV */
+.btn-mobile-nav {
+  border: none;
+  background: linear-gradient(
+    120deg,
+    rgba(245, 112, 174, 0.8),
+    rgba(29, 184, 195, 0.8)
+  );
+  filter: drop-shadow(0px 0px 10px rgba(245, 112, 174, 0.4));
+  border-radius: 5px;
+
+  border: none;
+  cursor: pointer;
+
+  display: none;
+}
+.icon-mobile-nav {
+  font-size: 2rem;
+  padding: 1rem;
+}
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
 /* ********** */
 /* HERO */
 
 .hero {
   padding: 12.8rem 3.2rem;
   gap: 6.4rem;
+  overflow: hidden;
 }
 
 .heading-primary {
@@ -95,7 +119,6 @@
   filter: brightness(1);
   box-shadow: 0px 0px 30px 0px #f570ae0d;
   border-radius: 5px;
-  border-bottom-right-radius: 5px;
   cursor: pointer;
   border-width: 1rem;
   border-style: solid;

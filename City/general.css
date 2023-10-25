@@ -22,6 +22,9 @@ p {
 .grid {
   display: grid;
 }
+.grid-1--colls {
+  grid-template-columns: 1fr;
+}
 .grid-2--colls {
   grid-template-columns: repeat(2, 1fr);
 }

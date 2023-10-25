@@ -9,21 +9,32 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    
     <link rel="stylesheet" href="general.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="querries.css" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script defer src="script.js"></script>
+
     <title>Document</title>
   </head>
   <body>
     <section class="section-hero">
       <div class="nav">
         <div class="state-box">California</div>
-        <div class="navigation">
-          <a class="nav-link" href="#beach">Beach</a>
-          <a class="nav-link" href="#gallery">Gallery</a>
-          <a class="nav-link" href="#more">More</a>
-        </div>
+        <nav class="navigation-box">
+
+          <div class="navigation">
+            <a class="nav-link" href="#beach">Beach</a>
+            <a class="nav-link" href="#gallery">Gallery</a>
+            <a class="nav-link" href="#more">More</a>
+          </div>
+          <button class="btn-mobile-nav">
+            <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+            <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+          </button>
+        </nav>
       </div>
       <div class="hero grid grid-2--colls">
         <div class="hero-logo-box">
