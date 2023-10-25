@@ -1,0 +1,71 @@
+@media (max-width: 90em) {
+  .triangle {
+    width: 120%;
+  }
+  .hero-quote-box {
+    width: 300px;
+    height: 450px;
+  }
+  .features-img {
+    width: 6.4rem;
+  }
+  .p-hero {
+    font-size: 2rem;
+  }
+  .p-adno {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+  .triangle {
+    width: 150%;
+  }
+  .hero-quote-box {
+    width: 250px;
+    height: 400px;
+  }
+  .heading-primary {
+    font-size: 8.6rem;
+  }
+  .p-adno {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 65em) {
+  .hero-quote-box {
+    width: 200px;
+    height: 350px;
+  }
+  .p-hero {
+    font-size: 1.6rem;
+  }
+  .heading-primary {
+    font-size: 7.2rem;
+  }
+}
+
+@media (max-width: 50em) {
+  .hero-quote-box {
+    width: 150px;
+    height: 250px;
+  }
+  .p-hero {
+    font-size: 1.2rem;
+  }
+  .heading-primary {
+    font-size: 5.2rem;
+  }
+  .hero-adnotation {
+    width: 80%;
+    top: -6.5rem;
+    transition: all 0.5s;
+  }
+  .p-adno {
+    font-size: 0.6rem;
+  }
+}

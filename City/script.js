@@ -40,3 +40,28 @@ const changeOpacity = function () {
   }, 1000);
 };
 changeOpacity();
+
+///////////////////////////////////////
+// TABLET SIZE ADNOTATION TIME
+
+const tabletMQ = window.matchMedia("(max-width: 50em)");
+
+function checkIfTablet() {
+  if (window.innerWidth < 1025) {
+    adnoHero.style.visibility = "visible";
+    adnoHero.style.opacity = "1";
+    setTimeout(() => {
+      adnoHero.style.visibility = "hidden";
+      adnoHero.style.opacity = "0";
+    }, 3000);
+    setInterval(() => {
+      if (quoteHero.style.opacity === "0") {
+        quoteHero.style.opacity = "0.2";
+      } else {
+        quoteHero.style.opacity = "0";
+      }
+    }, 2000);
+  }
+}
+checkIfTablet();
+//window.addEventListener("resize", checkIfTablet);
