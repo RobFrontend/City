@@ -1,3 +1,29 @@
+/*
+    '50': '#eefdfd',
+    '100': '#d4f9f9',
+    '200': '#aef1f3',
+    '300': '#77e5e9',
+    '400': '#38d0d8',
+    '500': '#1db8c30d',
+    '600': '#1a91a0',
+    '700': '#1c7482',
+    '800': '#1f5f6b',
+    '900': '#1e4f5b',
+    '950': '#0e343e',
+
+    '50': '#fdf2f7',
+    '100': '#fce7f2',
+    '200': '#fbcfe5',
+    '300': '#faa7cf',
+    '400': '#f570ae',
+    '500': '#ed4790',
+    '600': '#dc266d',
+    '700': '#bf1753',
+    '800': '#9e1645',
+    '900': '#84173d',
+    '950': '#510620',
+ */
+
 * {
   margin: 0;
   padding: 0;
@@ -9,15 +35,60 @@ html {
 }
 body {
   font-family: "Raleway", sans-serif;
-  color: rgba(233, 230, 238, 1);
+  /* color: rgba(233, 230, 238, 1); */
+  background-color: #fefefe;
   background-image: url(img/bbblurry.svg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
+.heading-primary {
+  position: relative;
+  font-size: 9.8rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: -3px;
+  color: rgba(233, 230, 238, 1);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+}
+
+.heading-secondary {
+  font-size: 5.2rem;
+  margin: 0 3.2rem;
+  letter-spacing: -4px;
+  color: #1f5f6b;
+  filter: drop-shadow(0px 0px 10px #aef1f3);
+}
+
+.heading-tertiary {
+  font-size: 4.8rem;
+  letter-spacing: -2px;
+  color: #9e1645;
+  filter: drop-shadow(0px 0px 10px #fbcfe5);
+  text-align: center;
+}
+
 p {
   font-size: 1.8rem;
+  font-weight: 500;
+  color: #252525;
+}
+.section-p {
+  line-height: 1.2;
+}
+.section {
+  margin-top: 9.8rem;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
 }
 .grid {
   display: grid;
@@ -56,8 +127,4 @@ p {
   background-position: center;
   background-size: cover;
   z-index: -1;
-}
-
-.section-beach {
-  height: 5000px;
 }
