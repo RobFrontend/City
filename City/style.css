@@ -29,6 +29,8 @@
     rgba(245, 112, 174, 0.6),
     rgba(29, 184, 195, 0.6)
   );
+  background-size: 150%;
+  background-position: center;
   border-radius: 10px;
   transition: all 0.3s;
 }
@@ -43,6 +45,8 @@
     rgba(245, 112, 174, 0.8),
     rgba(29, 184, 195, 0.8)
   );
+  background-size: 150%;
+  background-position: center;
   opacity: 1;
 }
 /* MOBILE NAV */
@@ -292,6 +296,8 @@
     rgba(245, 112, 174, 0.9),
     rgba(29, 184, 195, 0.9)
   );
+  background-size: 150%;
+  background-position: center;
 }
 .price-link:hover {
   background-image: linear-gradient(
@@ -315,4 +321,74 @@
   border: 2px solid rgba(245, 112, 174, 0.8);
   box-shadow: 0px 0px 25px 0px rgba(66, 68, 90, 0.35);
   border-radius: 10px;
+}
+
+/* /////////////////////// */
+/* GALLERY */
+.gallery-background {
+  position: relative;
+  margin-top: 6.4rem;
+  overflow: hidden;
+}
+
+.gallery-background:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -10px;
+  width: 110%;
+  height: 100%;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("img/la-gallery-background.webp");
+  background-position: center;
+  background-size: 110%;
+  filter: blur(0.4rem);
+  z-index: -1;
+}
+.gallery {
+  position: relative;
+  padding: 6.4rem 1.8rem;
+  gap: 4.8rem;
+  overflow: hidden;
+}
+
+.img-gallery-box {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.img-gallery {
+  width: 100%;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s;
+}
+
+.img-gallery:hover {
+  transform: scale(1.05);
+}
+.button-gallery {
+  display: none;
+  position: absolute;
+  background: none;
+  border: none;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.button-gallery-left {
+  left: 20px;
+}
+.button-gallery-right {
+  right: 20px;
+}
+.icon-gallery {
+  color: #fbcfe5;
+  filter: drop-shadow(0px 0px 5px #9e1645);
+  font-size: 3.6rem;
+}
+.button-gallery:hover {
+  opacity: 0.7;
 }

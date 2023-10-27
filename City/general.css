@@ -67,7 +67,7 @@ body {
 
 .heading-tertiary {
   font-size: 4.8rem;
-  letter-spacing: -2px;
+  letter-spacing: -3px;
   color: #9e1645;
   filter: drop-shadow(0px 0px 10px #fbcfe5);
   text-align: center;
@@ -82,7 +82,8 @@ p {
   line-height: 1.2;
 }
 .section {
-  margin-top: 9.8rem;
+  padding-top: 9.6rem;
+  padding-bottom: 3.2rem;
 }
 
 .container {
@@ -98,6 +99,9 @@ p {
 }
 .grid-2--colls {
   grid-template-columns: repeat(2, 1fr);
+}
+.grid-3--colls {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .nav {
@@ -121,7 +125,7 @@ p {
   position: absolute;
   top: 0px;
   left: 0px;
-  background-image: url("img/hero-background.png");
+  background-image: url("img/hero-background.webp");
   width: 100%;
   height: 100%;
   background-position: center;

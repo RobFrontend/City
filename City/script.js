@@ -41,13 +41,39 @@ const changeOpacity = function () {
 };
 changeOpacity();
 
-///////////////////////////////////////
+////////////////////////////////////////////
 // TABLET SIZE ADNOTATION TIME
 
 const tabletMQ = window.matchMedia("(max-width: 50em)");
 
+// Gallery buttons and imgs
+const btnGalleryLeft = document.querySelector(".button-gallery-left");
+const btnGalleryRight = document.querySelector(".button-gallery-right");
+
+const imgGallery1 = document.querySelector(".img-gallery-box-1");
+const imgGallery2 = document.querySelector(".img-gallery-box-2");
+const imgGallery3 = document.querySelector(".img-gallery-box-3");
+
 function checkIfTablet() {
   if (window.innerWidth < 1025) {
+    // gallery buttons and imgs
+    btnGalleryRight.addEventListener("click", function () {
+      imgGallery3.style.opacity = "1";
+      imgGallery3.style.display = "inline";
+      imgGallery1.style.display = "none";
+      imgGallery1.style.opacity = "0";
+      btnGalleryLeft.style.display = "inline";
+      btnGalleryRight.style.display = "none";
+    });
+    btnGalleryLeft.addEventListener("click", function () {
+      imgGallery1.style.opacity = "1";
+      imgGallery1.style.display = "inline";
+      imgGallery3.style.opacity = "0";
+      imgGallery3.style.display = "none";
+      btnGalleryRight.style.display = "inline";
+      btnGalleryLeft.style.display = "none";
+    });
+    // adnotation to hero youtube
     adnoHero.style.visibility = "visible";
     adnoHero.style.opacity = "1";
     setTimeout(() => {
@@ -64,10 +90,17 @@ function checkIfTablet() {
         quoteHero.style.opacity = "0";
       }
     }, 2000);
+  } else {
+    imgGallery3.style.opacity = "1";
+    imgGallery3.style.display = "inline";
+    imgGallery1.style.opacity = "1";
+    imgGallery1.style.display = "inline";
+    btnGalleryRight.style.display = "none";
+    btnGalleryLeft.style.display = "none";
   }
 }
 checkIfTablet();
-//window.addEventListener("resize", checkIfTablet);
+// window.addEventListener("resize", checkIfTablet);
 
 //////////////////////////////////////////
 // Mobile navigation
