@@ -26,16 +26,20 @@ imgHero.addEventListener("click", function () {
   window.open("https://www.youtube.com/watch?v=JlSsbNc0_u0", "_blank");
 });
 
-// TRIANGLE OPACITY
-
+// TRIANGLE OPACITY and Footer copyright INTERVAL
+const copyRight = document.querySelector(".copy");
 const triangle = document.querySelector(".triangle");
 
 const changeOpacity = function () {
   setInterval(() => {
     if (triangle.style.opacity === "0.5") {
       triangle.style.opacity = "1";
+      copyRight.style.opacity = "0.8";
+      copyRight.style.color = "#0e343e";
     } else {
       triangle.style.opacity = "0.5";
+      copyRight.style.color = "#510620";
+      copyRight.style.opacity = "0.6";
     }
   }, 1000);
 };
@@ -111,3 +115,10 @@ const navigation = document.querySelector(".navigation-box");
 // btnMobile.addEventListener("click", function () {
 //   navigation.classList.toggle("nav-open");
 // });
+
+// DATA
+
+const year = document.querySelector(".year");
+const getYear = new Date();
+
+year.textContent = getYear.getFullYear();

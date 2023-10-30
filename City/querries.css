@@ -148,6 +148,10 @@
   .button-gallery-left {
     display: none;
   }
+  .googlemap,
+  iframe {
+    height: 30rem;
+  }
   /* Mobile */
   .navigation {
     background-color: rgba(255, 255, 255, 0.6);
@@ -225,5 +229,12 @@
   }
   .more-link {
     padding: 0.8rem, 2rem;
+  }
+  .footer-box {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .logo-footer {
+    grid-column: 1/-1;
+    margin-bottom: 2.4rem;
   }
 }
