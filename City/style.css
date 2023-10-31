@@ -59,11 +59,15 @@
   );
   filter: drop-shadow(0px 0px 10px rgba(245, 112, 174, 0.4));
   border-radius: 5px;
+  transition: all 0.3s;
 
   border: none;
   cursor: pointer;
 
   display: none;
+}
+.btn-mobile-nav:hover {
+  opacity: 0.8;
 }
 .icon-mobile-nav {
   font-size: 2rem;

@@ -110,12 +110,17 @@ checkIfTablet();
 // Mobile navigation
 
 const btnMobile = document.querySelector(".btn-mobile-nav");
-const navigation = document.querySelector(".navigation-box");
+const navigation = document.querySelector(".header");
+const navLink = document.querySelectorAll(".nav-link");
 
-// btnMobile.addEventListener("click", function () {
-//   navigation.classList.toggle("nav-open");
-// });
-
+btnMobile.addEventListener("click", function () {
+  navigation.classList.toggle("nav-open");
+});
+navLink.forEach((navLink) => {
+  navLink.addEventListener("click", function () {
+    navigation.classList.remove("nav-open");
+  });
+});
 // DATA
 
 const year = document.querySelector(".year");
