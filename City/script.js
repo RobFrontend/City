@@ -127,3 +127,26 @@ const year = document.querySelector(".year");
 const getYear = new Date();
 
 year.textContent = getYear.getFullYear();
+
+// NAV Scrolling
+
+const btnBeach = document.querySelector(".nav-wheel");
+const sectionBeach = document.querySelector("#beach");
+
+btnBeach.addEventListener("click", function () {
+  sectionBeach.scrollIntoView({ behavior: "smooth" });
+});
+
+const btnGallery = document.querySelector(".nav-gallery");
+const sectionGallery = document.querySelector("#gallery");
+
+btnGallery.addEventListener("click", function () {
+  sectionGallery.scrollIntoView({ behavior: "smooth" });
+});
+
+const btnMore = document.querySelector(".nav-more");
+const sectionMore = document.querySelector("#more");
+
+btnMore.addEventListener("click", function () {
+  sectionMore.scrollIntoView({ behavior: "smooth" });
+});
