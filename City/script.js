@@ -130,23 +130,34 @@ year.textContent = getYear.getFullYear();
 
 // NAV Scrolling
 
-const btnBeach = document.querySelector(".nav-wheel");
-const sectionBeach = document.querySelector("#beach");
+// const btnBeach = document.querySelector(".nav-wheel");
+// const sectionBeach = document.querySelector("#beach");
 
-btnBeach.addEventListener("click", function () {
-  sectionBeach.scrollIntoView({ behavior: "smooth" });
-});
+// btnBeach.addEventListener("click", function () {
+//   sectionBeach.scrollIntoView({ behavior: "smooth" });
+// });
 
-const btnGallery = document.querySelector(".nav-gallery");
-const sectionGallery = document.querySelector("#gallery");
+// const btnGallery = document.querySelector(".nav-gallery");
+// const sectionGallery = document.querySelector("#gallery");
 
-btnGallery.addEventListener("click", function () {
-  sectionGallery.scrollIntoView({ behavior: "smooth" });
-});
+// btnGallery.addEventListener("click", function () {
+//   sectionGallery.scrollIntoView({ behavior: "smooth" });
+// });
 
-const btnMore = document.querySelector(".nav-more");
-const sectionMore = document.querySelector("#more");
+// const btnMore = document.querySelector(".nav-more");
+// const sectionMore = document.querySelector("#more");
 
-btnMore.addEventListener("click", function () {
-  sectionMore.scrollIntoView({ behavior: "smooth" });
-});
+// btnMore.addEventListener("click", function () {
+//   sectionMore.scrollIntoView({ behavior: "smooth" });
+// });
+
+const navLinks = document.querySelectorAll(".nav__links");
+navLinks.forEach((navLinks) =>
+  navLinks.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (e.target.classList.contains("nav__link")) {
+      const id = e.target.getAttribute("href");
+      document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+    }
+  })
+);
