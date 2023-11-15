@@ -1,9 +1,17 @@
 "use strict";
 
+// DATA
+
+const year = document.querySelector(".year");
+const getYear = new Date();
+
+year.textContent = getYear.getFullYear();
+
 // HERO IMG HOVER AND LINK TO YOUTUBE
 const imgHero = document.querySelector(".hero-quote-box");
 const quoteHero = document.querySelector(".p-hero");
 const adnoHero = document.querySelector(".hero-adnotation");
+const hero = document.querySelector(".section-hero");
 
 imgHero.addEventListener("mouseover", function () {
   quoteHero.style.zIndex = "5";
@@ -31,15 +39,19 @@ const copyRight = document.querySelector(".copy");
 const triangle = document.querySelector(".triangle");
 
 const changeOpacity = function () {
+  const footerText = [`© ${year.textContent} robfrontend`, "Los Angeles"];
+  let i = 1;
   setInterval(() => {
     if (triangle.style.opacity === "0.5") {
       triangle.style.opacity = "1";
-      copyRight.style.opacity = "0.8";
+      copyRight.style.opacity = "0.5";
       copyRight.style.color = "#0e343e";
+      copyRight.textContent = footerText[i];
+      i = (i + 1) % footerText.length;
     } else {
       triangle.style.opacity = "0.5";
       copyRight.style.color = "#510620";
-      copyRight.style.opacity = "0.6";
+      copyRight.style.opacity = "0";
     }
   }, 1000);
 };
@@ -121,12 +133,6 @@ navLink.forEach((navLink) => {
     navigation.classList.remove("nav-open");
   });
 });
-// DATA
-
-const year = document.querySelector(".year");
-const getYear = new Date();
-
-year.textContent = getYear.getFullYear();
 
 // NAV Scrolling
 
@@ -161,3 +167,26 @@ navLinks.forEach((navLinks) =>
     }
   })
 );
+
+// Sticky NAV
+
+const headerHeight = navigation.getBoundingClientRect().height;
+console.log(headerHeight);
+
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  console.log(entry);
+  if (!entry.isIntersecting) {
+    navigation.classList.add("stickyNav");
+  } else {
+    navigation.classList.remove("stickyNav");
+  }
+};
+
+const observer = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${headerHeight}px`,
+});
+
+observer.observe(hero);

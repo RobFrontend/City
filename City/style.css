@@ -1,11 +1,29 @@
 /* NAV */
-.state-box {
+.nav {
+  height: 9rem;
+}
+
+.stickyNav {
+  position: fixed;
+  background-color: rgb(0, 0, 0, 0.8);
+  width: 100%;
+  z-index: 99;
+}
+
+.state,
+.state:visited {
   font-size: 3.2rem;
   font-weight: 600;
   color: rgba(233, 230, 238, 1);
   text-transform: capitalize;
+  text-decoration: none;
   opacity: 0.7;
+  transition: all 0.3s;
 }
+.state:hover {
+  opacity: 0.9;
+}
+
 .navigation {
   display: flex;
   gap: 4.8rem;
@@ -463,11 +481,12 @@ footer {
 
 .copyright {
   text-align: center;
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
 .copy {
+  opacity: 0.5;
   font-weight: 700;
   color: #0e343e;
-  transition: all 1s;
+  transition: all 0.5s;
 }
