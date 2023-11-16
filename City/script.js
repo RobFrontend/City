@@ -238,17 +238,18 @@ reavealFeatureObserver.observe(sectionFeature);
 // Lazy loading imgs
 
 const lazyImgs = document.querySelectorAll("img[data-src]");
+const slider = document.querySelector(".slider");
 
 const loadImg = function (entries, observer) {
   const [entry] = entries;
-  // if (!entry.isIntersecting) {
-  //   return;
-  // }
+  if (!entry.isIntersecting) {
+    return;
+  }
 
-  // replace lazy img with normal
   entry.target.src = entry.target.dataset.src;
+  // replace lazy img with normal
   entry.target.addEventListener("load", function () {
-    entry.target.classList.remove("img-gallery-lazy");
+    slider.classList.remove("slider-blur");
   });
 
   observer.unobserve(entry.target);
@@ -256,7 +257,7 @@ const loadImg = function (entries, observer) {
 
 const loadObserver = new IntersectionObserver(loadImg, {
   root: null,
-  threshold: 1,
+  threshold: 0,
   rootMargin: "200px",
 });
 
