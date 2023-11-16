@@ -190,3 +190,11 @@ iframe {
   opacity: 0;
   transform: translateY(-2rem) rotateY(-35deg);
 }
+
+img {
+  transition: filter 0.5s;
+}
+
+.img-gallery-lazy {
+  filter: blur(1rem);
+}

@@ -74,16 +74,18 @@ function checkIfTablet() {
   if (window.innerWidth < 1025) {
     // gallery buttons and imgs
     btnGalleryRight.addEventListener("click", function () {
-      imgGallery3.style.opacity = "1";
       imgGallery3.style.display = "inline";
+      setTimeout(() => (imgGallery3.style.opacity = "1"), 10);
+      // imgGallery3.style.opacity = "1";
       imgGallery1.style.display = "none";
       imgGallery1.style.opacity = "0";
       btnGalleryLeft.style.display = "inline";
       btnGalleryRight.style.display = "none";
     });
     btnGalleryLeft.addEventListener("click", function () {
-      imgGallery1.style.opacity = "1";
       imgGallery1.style.display = "inline";
+      setTimeout(() => (imgGallery1.style.opacity = "1"), 10);
+      // imgGallery1.style.opacity = "1";
       imgGallery3.style.opacity = "0";
       imgGallery3.style.display = "none";
       btnGalleryRight.style.display = "inline";
@@ -232,3 +234,71 @@ const reavealFeatureObserver = new IntersectionObserver(revealFeature, {
 });
 sectionFeature.classList.add("feature-hidden");
 reavealFeatureObserver.observe(sectionFeature);
+
+// Lazy loading imgs
+
+const lazyImgs = document.querySelectorAll("img[data-src]");
+
+const loadImg = function (entries, observer) {
+  const [entry] = entries;
+  // if (!entry.isIntersecting) {
+  //   return;
+  // }
+
+  // replace lazy img with normal
+  entry.target.src = entry.target.dataset.src;
+  entry.target.addEventListener("load", function () {
+    entry.target.classList.remove("img-gallery-lazy");
+  });
+
+  observer.unobserve(entry.target);
+};
+
+const loadObserver = new IntersectionObserver(loadImg, {
+  root: null,
+  threshold: 1,
+  rootMargin: "200px",
+});
+
+lazyImgs.forEach((lazyImg) => loadObserver.observe(lazyImg));
+
+////////////////////////////////////
+// Slide
+
+// const ifGal3Off = document.querySelector(".img-gallery-box-3");
+// const slides = document.querySelectorAll(".slide");
+
+// let curSlide = 0;
+// const maxSlide = curSlide.length;
+
+// const doSlide = function (slide) {
+//   slides.forEach(
+//     (s, i) => (s.style.transform = `translateX(${50 * (i - curSlide)}%)`)
+//   );
+// };
+
+// // Next slide
+
+// const nextSlide = function () {
+//   if (curSlide === maxSlide - 1) {
+//     curSlide = 0;
+//   } else {
+//     curSlide++;
+//   }
+//   doSlide(curSlide);
+// };
+
+// const prevSlide = function () {
+//   if (curSlide === 0) {
+//     curSlide = maxSlide - 1;
+//   } else {
+//     curSlide--;
+//   }
+//   doSlide(curSlide);
+// };
+
+// if (ifGal3Off.style.opacity === "0") {
+//   doSlide(0);
+//   btnGalleryRight.addEventListener("click", nextSlide);
+//   btnGalleryLeft.addEventListener("click", prevSlide);
+// }
