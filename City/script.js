@@ -23,7 +23,7 @@ imgHero.addEventListener("mouseover", function () {
     adnoHero.style.opacity = "0";
   }, 2000);
 
-  imgHero.addEventListener("mouseleave", function () {
+  imgHero.addEventListener("mouseout", function () {
     quoteHero.style.zIndex = "-1";
     quoteHero.style.opacity = "0";
     quoteHero.style.opacity = "0";
@@ -190,3 +190,45 @@ const observer = new IntersectionObserver(stickyNav, {
 });
 
 observer.observe(hero);
+
+// Reveal Sections UP
+
+const reveals = document.querySelectorAll(".reveal");
+
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) {
+    return;
+  }
+  entry.target.classList.remove("section-hidden");
+  observer.unobserve(entry.target);
+};
+
+const revealObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+});
+
+reveals.forEach(function (reveal) {
+  revealObserver.observe(reveal);
+  reveal.classList.add("section-hidden");
+});
+
+// Reveal features DOWN
+const sectionFeature = document.querySelector(".reveal-feature");
+
+const revealFeature = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) {
+    return;
+  }
+  entry.target.classList.remove("feature-hidden");
+  observer.unobserve(entry.target);
+};
+
+const reavealFeatureObserver = new IntersectionObserver(revealFeature, {
+  root: null,
+  threshold: 0.5,
+});
+sectionFeature.classList.add("feature-hidden");
+reavealFeatureObserver.observe(sectionFeature);

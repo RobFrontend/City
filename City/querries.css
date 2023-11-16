@@ -38,8 +38,8 @@
 /* ////////////////////////////////////////////////////// */
 @media (max-width: 65em) {
   .hero-quote-box {
-    width: 200px;
-    height: 350px;
+    width: 220px;
+    height: 380px;
   }
   .p-hero {
     font-size: 1.6rem;
@@ -70,9 +70,12 @@
   .btn-mobile-nav {
     display: inline;
   }
+  .section-hero {
+    min-height: 550px;
+  }
   .hero-quote-box {
-    width: 150px;
-    height: 250px;
+    max-width: 200px;
+    max-height: 300px;
   }
   .p-hero {
     font-size: 1.2rem;
@@ -157,7 +160,7 @@
     z-index: 999;
   }
   .navigation {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     position: absolute;
@@ -195,14 +198,18 @@
   html {
     font-size: 50%;
   }
+  .section-hero {
+    overflow: hidden;
+  }
   .hero {
     grid-template-columns: 1fr;
+    overflow: visible;
   }
 
   .hero-quote-box {
     left: 0;
     width: 200px;
-    height: 120px;
+    height: 300px;
     margin-top: 9.6rem;
     border-width: 0.5rem;
     z-index: 2;
@@ -223,6 +230,10 @@
 }
 /* /////////////////////////////////////////////////////// */
 @media (max-width: 25em) {
+  .hero-quote-box {
+    width: 200px;
+    height: 280px;
+  }
   .more-link,
   .price-link {
     font-size: 1.8rem;
